@@ -1,5 +1,5 @@
 #import "template.typ": *
-#import "@preview/glossarium:0.5.4": make-glossary, register-glossary, print-glossary, gls, glspl
+#import "@preview/glossarium:0.5.4": print-glossary
 
 // Take a look at the file `template.typ` in the file panel
 // to customize this template and discover how it works.
@@ -24,17 +24,6 @@
 #lorem(40)
 
 === Glossary
-#show: make-glossary
-#let entry-list = (
-  (
-    key: "kuleuven",
-    short: "KU Leuven",
-    long: "Katholieke Universiteit Leuven",
-    description: "A university in Belgium.",
-  ),
-)
-#register-glossary(entry-list)
-
 #print-glossary(
  entry-list
 )
