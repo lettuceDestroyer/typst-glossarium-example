@@ -1,6 +1,14 @@
-// The project function defines how your document looks.
-// It takes your content and some metadata and formats it.
-// Go ahead and customize it to your liking!
+#import "@preview/glossarium:0.5.4": make-glossary, register-glossary, print-glossary, gls, glspl
+
+#let entry-list = (
+  (
+    key: "kuleuven",
+    short: "KU Leuven",
+    long: "Katholieke Universiteit Leuven",
+    description: "A university in Belgium.",
+  ),
+)
+  
 #let project(title: "", authors: (), body) = {
   // Set the document's basic properties.
   set document(author: authors, title: title)
@@ -14,6 +22,10 @@
 
   // Main body.
   set par(justify: true)
+
+  //Glossary
+  show: make-glossary
+  register-glossary(entry-list)
 
   body
 }
