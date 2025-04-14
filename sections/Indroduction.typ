@@ -2,5 +2,3 @@
 #show: make-glossary
 
 This is a way of referencing a glossary entry @kuleuven.
-
-This is a second way of referencing a glossary entry #gls(kuleuven).
